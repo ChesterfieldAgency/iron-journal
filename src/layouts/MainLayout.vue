@@ -288,6 +288,11 @@
 
           <div class="q-my-sm">
             Code &copy;
+            <a href="https://github.com/zmetcalf">Zach Metcalf</a>, 2024
+          </div>
+
+          <div class="q-my-sm">
+            Original Code &copy;
             <a href="https://twitter.com/tiberianpun">Nick Boughton</a>, 2021
           </div>
 

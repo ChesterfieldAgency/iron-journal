@@ -1,13 +1,15 @@
 {
   "name": "iron-journal",
-  "version": "2.2.5",
-  "description": "App for journalling solo Ironsworn campaigns",
+  "version": "3.0.0-a.1",
+  "description": "App for journaling solo Ironsworn campaigns",
   "productName": "Iron Journal",
-  "author": "Nick Boughton <nicholasboughton@gmail.com>",
+  "author": "Zach Metcalf - Nick Boughton <nicholasboughton@gmail.com>",
   "private": true,
+  "license": "AGPL-3.0",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "start": "quasar dev"
   },
   "dependencies": {
     "@quasar/extras": "^1.14.3",

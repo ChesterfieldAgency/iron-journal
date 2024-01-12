@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  app:
+    image: nginx:alpine
+    ports:
+      - "3335:80"
+    restart: unless-stopped
+    volumes:
+      - ./dist/spa:/usr/share/nginx/html:ro

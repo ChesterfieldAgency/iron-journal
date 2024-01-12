@@ -1,26 +1,35 @@
 # Iron Journal (iron-journal)
 
-App for journalling solo Ironsworn campaigns
+App for journaling solo Ironsworn campaigns
+
+## Why the fork?
+
+- Belief that software and should be open to the whole world, including those you disagree with.
 
 ## Install the dependencies
+
 ```bash
 yarn
 ```
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
 ```bash
 quasar dev
 ```
 
 ### Lint the files
+
 ```bash
 yarn run lint
 ```
 
 ### Build the app for production
+
 ```bash
 quasar build
 ```
 
 ### Customize the configuration
+
 See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).
