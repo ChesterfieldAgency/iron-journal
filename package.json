@@ -16,13 +16,15 @@
     "@svgdotjs/svg.js": "^3.1.1",
     "core-js": "^3.19.0",
     "dexie": "^3.0.3",
+    "firebase": "^10.7.1",
     "honeycomb-grid": "^3.1.8",
     "pinia": "^2.0.0",
     "quasar": "^2.7.5",
     "sanitize-html": "^2.5.2",
     "uuid": "^8.3.2",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vuefire": "^3.1.22"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
@@ -32,6 +34,7 @@
     "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
+    "dotenv": "^16.3.1",
     "electron": "^15.3.0",
     "electron-packager": "^15.2.0",
     "eslint": "^8.1.0",
