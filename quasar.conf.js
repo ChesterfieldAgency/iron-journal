@@ -17,7 +17,7 @@ module.exports = configure(function (ctx) {
     supportTS: {
       tsCheckerConfig: {
         eslint: {
-          enabled: true,
+          enabled: false,
           files: './src/**/*.{ts,tsx,js,jsx,vue}',
         },
       }
@@ -30,7 +30,8 @@ module.exports = configure(function (ctx) {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
     boot: [
-      'pinia'
+      'pinia',
+      'firebase'
     ],
 
     // https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css

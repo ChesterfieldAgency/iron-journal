@@ -32,3 +32,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 .env*
+
+# Firestore
+firestore-debug.log
+firebase-debug.log
+.firebaserc
+ui-debug.log
