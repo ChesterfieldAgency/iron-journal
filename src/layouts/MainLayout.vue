@@ -128,15 +128,7 @@
 
         <q-separator size="lg" />
 
-        <q-item clickable v-ripple @click="signinWithPopup()">
-          <q-item-section avatar>
-            <q-icon name="login" />
-          </q-item-section>
-          <q-item-section>
-            Sign-in to Google
-            <q-tooltip>Sign-in to save data.</q-tooltip>
-          </q-item-section>
-        </q-item>
+        <LoginMenuItem />
 
         <q-separator size="lg" />
 
@@ -314,11 +306,6 @@
           </div>
 
           <div class="q-my-sm">
-            If you like this app and want to say thanks you can
-            <a href="https://ko-fi.com/tiberianpun">buy me a coffee</a>
-          </div>
-
-          <div class="q-my-sm">
             With extra thanks to
             <a href="https://twitter.com/r_sek">rsek</a> for the amazing
             <a href="https://github.com/rsek/datasworn">Datasworn repository</a>
@@ -334,12 +321,6 @@
 <script lang="ts">
 /* eslint-disable no-unused-vars */
 import { ref, defineComponent, computed } from 'vue';
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-  signOut,
- } from 'firebase/auth'
-import { useCurrentUser, useFirebaseAuth } from 'vuefire'
 
 import { useCampaign } from 'src/store/campaign';
 import { useConfig } from 'src/store/config';
@@ -351,24 +332,14 @@ import Journal from 'src/components/Journal/Journal.vue';
 import Oracles from 'src/components/Oracles/Oracles.vue';
 import Moves from 'src/components/Moves/Moves.vue';
 import Roller from 'src/components/Widgets/Roller.vue';
+import LoginMenuItem from 'src/components/Widgets/LoginMenuItem.vue';
 
 
-export const googleAuthProvider = new GoogleAuthProvider()
 export default defineComponent({
-  components: { Oracles, Moves, Roller, Journal },
+  components: { Oracles, Moves, Roller, Journal, LoginMenuItem },
   setup() {
     const leftDrawerOpen = ref(false);
     const rightDrawerOpen = ref(false);
-    const error: any = ref({ value: null });
-
-    const auth: any = useFirebaseAuth()!
-
-    function signinWithPopup() {
-      signInWithPopup(auth, googleAuthProvider).catch((reason: any) => {
-        console.error('Failed signinWithPopup', reason)
-        error.value = reason
-      });
-    }
 
     const campaign = useCampaign();
     const config = useConfig();
@@ -440,9 +411,6 @@ export default defineComponent({
         rightDrawerOpen.value = !rightDrawerOpen.value;
       },
       width,
-
-      signinWithPopup,
-      error,
 
       campaign,
       config,
